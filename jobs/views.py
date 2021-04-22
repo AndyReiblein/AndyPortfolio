@@ -12,8 +12,7 @@ def home(request):
 
 def contact(request):
 	if request.method == 'POST':
-        # pdb.set_trace()
-        print('hello')
+		# hello
 		form = ContactForm(request.POST)
 		if form.is_valid():
 			subject = "Website Inquiry" 
