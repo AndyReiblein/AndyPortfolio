@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.80.0">
-    <title>Album example · Bootstrap v5.0</title>
+    <title>Andrew Reiblein</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/album/">
 
@@ -68,6 +68,19 @@
 </header>
 
 <main>
+  
+  {% if messages %}
+    {% for message in messages %}
+      {% if message.level_tag == 'success' %}
+        <div class="alert alert-success" role="alert">
+          {{ message }}
+        </div>
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+  
+  
+  
 
 
   <section class="py-5 text-center container">

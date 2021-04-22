@@ -26,6 +26,6 @@ urlpatterns = [
     path('contact/', jobs.views.contact, name='contact'),
     path('about/', jobs.views.about, name='about'),
     path('home/', jobs.views.home, name='home'),
-    path('messages/', jobs.views.messages, name='messages'),
+    
 
 ]   +static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
