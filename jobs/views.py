@@ -4,6 +4,7 @@ from .forms import ContactForm
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse
 import pdb
+from django.contrib import messages
 
 # Create your views here.
 def home(request):
@@ -12,7 +13,8 @@ def home(request):
 
 def contact(request):
 	if request.method == 'POST':
-		# hello
+		# pdb.set_trace()
+
 		form = ContactForm(request.POST)
 		if form.is_valid():
 			subject = "Website Inquiry" 
@@ -28,12 +30,19 @@ def contact(request):
 				send_mail(subject, message, 'andrewmreiblein013@gmail.com', ['andrewmreiblein013@gmail.com'], fail_silently=False) 
 			except BadHeaderError:
 				return HttpResponse('Invalid header found.')
-         
+            messages.success(request, f'Account created for {username}!')
 			return redirect("/")
+			
+
+			
+			
             
-      
+           
 	form = ContactForm()
 	return render(request, "contact.html", {'form':form})
 
 def about(request):
     return render(request, 'about.html')
+
+def messages(request):
+	return render(request, 'messages.html')
