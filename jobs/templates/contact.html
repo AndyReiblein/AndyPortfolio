@@ -1,14 +1,46 @@
 
-<div style="margin:80px">
-    <h1>Contact</h1>
-    <h4>Contact us directly if you have any questions</h4>
-    <p>
-        Please write your name, email address and a message below if you have any questions.
-        One of our staff members will be happy to contact you directly and answer your questions as soon as possible. 
-    </p>
-    <form method="post">
-    {% csrf_token %}
-        {{form.as_p}}
-        <button href='{% url "home" %}' type="submit">Submit</button>
-    </form>
-</div>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+        <a class="navbar-brand mr-4" type="button" href="{% url 'home' %}">Andrew Reiblein</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+              <p>
+                <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+                <a class="nav-item nav-link" href="{% url 'about' %}">About me</a>
+                
+              </p>
+              
+              
+            </div>
+          </div>
+        </div>
+      </nav>
+ 
+</header>
+
+
+    <div style="margin:80px">
+        <h1>Contact</h1>
+        <h4>Contact us directly if you have any questions</h4>
+        <p>
+            Please write your name, email address and a message below if you have any questions.
+            One of our staff members will be happy to contact you directly and answer your questions as soon as possible. 
+        </p>
+        <form method="post">
+        {% csrf_token %}
+            {{form.as_p}}
+            <button href='{% url "home" %}' type="submit">Submit</button>
+        </form>
+    </div>
+
+        
+
+
+
+

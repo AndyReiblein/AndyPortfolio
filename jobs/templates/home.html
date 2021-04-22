@@ -47,14 +47,14 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Andrew Reiblein</a>
+          <a class="navbar-brand mr-4" type="button" href="{% url 'home' %}">Andrew Reiblein</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ml-auto">
               <p>
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
                 <a class="nav-item nav-link" href="{% url 'about' %}">About me</a>
                 
               </p>
@@ -87,9 +87,11 @@
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
         <h1 class="fw-light">Andrew Reiblein</h1>
-        <p class="lead text-muted">something sbout me.</p>
+        <p class="lead text-muted">something about me.</p>
         <p>
-          <a class="nav-item nav-link" href="{% url 'contact' %}">contact</a>
+          <a href="{% url 'contact' %}">
+            <input type="button" value="Contact Me" />
+          </a>
           
         </p>
       </div>
@@ -109,7 +111,7 @@
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <a href="https://github.com/AndyReiblein/blogsproject.git/">
-                    <input type="button" value="Visit project" />
+                    <input type="button" value="Visit Project" />
                   </a>
 
                 </div>
@@ -127,7 +129,7 @@
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <a href="https://github.com/AndyReiblein/NewsApp.git/">
-                    <input type="button" value="Visit project" />
+                    <input type="button" value="Visit Project" />
                   </a>
                   
                 </div>
@@ -145,7 +147,7 @@
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <a href="https://github.com/AndyReiblein/bookr.git">
-                    <input type="button" value="Visit project" />
+                    <input type="button" value="Visit Project" />
                   </a>
                 </div>
               </div>
