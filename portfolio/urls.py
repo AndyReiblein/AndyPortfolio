@@ -19,6 +19,8 @@ from django.conf import settings
 from django.conf.urls.static import static
 import jobs.views
 from jobs import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,5 +29,8 @@ urlpatterns = [
     path('about/', jobs.views.about, name='about'),
     path('home/', jobs.views.home, name='home'),
     
-
-]   +static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    
+]   + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+# if settings.DEBUG:
+#     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    

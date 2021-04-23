@@ -1,1 +1,113 @@
-<h1>hello</h1>
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Simply Me</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 20px Montserrat, sans-serif;
+    line-height: 1.8;
+    color: #e3eaf3;
+  }
+  p {font-size: 16px;}
+  .margin {margin-bottom: 45px;}
+  .bg-1 { 
+    background-color: #f0f0f0; /* Green */
+    color: #db0000;
+  }
+  /* middle about part  */
+  .bg-2 { 
+    background-color: #d9dfeb; /* Dark Blue */
+    color: #8f0606;
+  }
+  .bg-3 { 
+    background-color: #0a7212; /* White */
+    color: #e8f3e7;
+  }
+  /* lastblock */
+  .bg-4 { 
+    background-color: #f8f8f8; /* Black Gray */
+    color: rgb(253, 243, 243);
+  }
+  .container-fluid {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 20px;
+    letter-spacing: 3px;
+  }
+  .navbar-nav  li a:hover {
+    color: #8bd6d6 !important;
+  }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand mr-4" type="button" href="{% url 'home' %}">Andrew Reiblein</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="#"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ml-auto">
+            <p>
+              <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+              <a class="nav-item nav-link" href="#">Blogs</a>
+              
+                
+              
+            </p> 
+          </div>
+        </div>
+      </div>
+    </nav>
+
+
+      
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-608202ec95fdf96a"></script>
+
+</header>
+
+<!-- First Container -->
+
+  <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="andrew-reiblein-476633193" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://za.linkedin.com/in/andrew-reiblein-476633193?trk=profile-badge"></a></div>
+                   
+  <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+
+
+<!-- Second Container -->
+<div class="container-fluid bg-2 text-center">
+  <h3 class="margin">Who Am I?</h3>
+  <p>Something about me</p>
+</div>
+
+<!-- Third Container (Grid) -->
+
+
+<!-- Footer -->
+<footer class="container-fluid bg-4 text-center">
+  <p>Thank you for your interest</p> 
+</footer>
+
+</body>
+</html>
